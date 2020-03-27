@@ -8,10 +8,10 @@ namespace ATM
         {
             var hundreddollarbills = new Amount(570);
 
-            IWithdraw chainlinkHead = new Withdraw100Note();
-            IWithdraw chainlink1 = new Withdraw50Bills();
-            IWithdraw chainlink2 = new Withdraw20Coins();
-            IWithdraw chainlink3 = new Withdraw10Coins();
+            IWithdraw chainlinkHead = new Withdraw500Notes();
+            IWithdraw chainlink1 = new Withdraw100Notes();
+            IWithdraw chainlink2 = new Withdraw50Notes();
+            IWithdraw chainlink3 = new Withdraw20Coins();
 
             chainlinkHead.SetNextWithdrawChain(chainlink1);
             chainlink1.SetNextWithdrawChain(chainlink2);

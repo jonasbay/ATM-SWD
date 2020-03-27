@@ -4,14 +4,14 @@ using System.Text;
 
 namespace ATM
 {
-    public class Withdraw100Note : IWithdraw
+    public class Withdraw100Notes : IWithdraw
     {
-        private IWithdraw nexInChain;
+        private IWithdraw _nextInChain;
         private int _100billsCount = 0;
 
         public void SetNextWithdrawChain(IWithdraw c)
         {
-            nexInChain = c;
+            _nextInChain = c;
         }
 
         public void Withdraw(Amount request)
@@ -27,10 +27,10 @@ namespace ATM
                 Console.WriteLine("You have withdrawed " + _100billsCount + "x 100 dollar bills.");
                 Console.WriteLine("Remaining amount: " + request.amountLeft_);
 
-                nexInChain.Withdraw(request);
+                _nextInChain.Withdraw(request);
             }
             else
-                nexInChain.Withdraw(request);
+                _nextInChain.Withdraw(request);
         }
     }
 }
