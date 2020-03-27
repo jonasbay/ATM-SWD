@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ATM
 {
-    public class Withdraw100Notes : IWithdraw
+    public class Withdraw200Notes : IWithdraw
     {
         private IWithdraw _nextInChain;
-        private int _100noteCount = 0;
+        private int _200noteCount = 0;
 
         public void SetNextWithdrawChain(IWithdraw c)
         {
@@ -16,15 +14,15 @@ namespace ATM
 
         public void Withdraw(Amount request)
         {
-            if (request.amountLeft_ >= 100)
+            if (request.amountLeft_ >= 200)
             {
-                while (request.amountLeft_ >= 100)
+                while (request.amountLeft_ >= 200)
                 {
-                    _100noteCount++;
-                    request.amountLeft_ -= 100;
+                    _200noteCount++;
+                    request.amountLeft_ -= 200;
                 }
 
-                Console.WriteLine("You have withdrawn " + _100noteCount + "x 100 note(s).");
+                Console.WriteLine("You have withdrawn " + _200noteCount + "x 200 note(s).");
 
                 _nextInChain.Withdraw(request);
             }

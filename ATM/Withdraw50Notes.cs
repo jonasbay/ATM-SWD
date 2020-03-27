@@ -8,7 +8,7 @@ namespace ATM
     {
 
         private IWithdraw nexInChain;
-        private int _100noteCount = 0;
+        private int _50NoteCount = 0;
 
         public void SetNextWithdrawChain(IWithdraw c)
         {
@@ -17,6 +17,20 @@ namespace ATM
 
         public void Withdraw(Amount request)
         {
+            if (request.amountLeft_ >= 50)
+            {
+                while (request.amountLeft_ >= 50)
+                {
+                    _50NoteCount++;
+                    request.amountLeft_ -= 50;
+                }
+
+                Console.WriteLine("You have withdrawn " + _50NoteCount + " x 50 note(s).");
+
+                nexInChain.Withdraw(request);
+            }
+            else
+                nexInChain.Withdraw(request);
 
         }
     }
