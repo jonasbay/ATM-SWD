@@ -16,9 +16,9 @@ namespace ATM
 
         public void Withdraw(Amount request)
         {
-            if (request.amountLeft_ > 2)
+            if (request.amountLeft_ >= 2)
             {
-                while (request.amountLeft_ > 2)
+                while (request.amountLeft_ >= 2)
                 {
                     _2coinsCount++;
                     request.amountLeft_ -= 2;
