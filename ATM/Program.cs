@@ -33,10 +33,10 @@ namespace ATM
             chainlink6.SetNextWithdrawChain(chainlink7);
             chainlink7.SetNextWithdrawChain(chainlink8);
 
-            chainlinkHead.Withdraw(money);
             chainlinkHead.Withdraw(hundreddollarbills);
             Console.WriteLine("Total amount withdrawn: " + amountToWithdraw);
 
+            chainlinkHead.Withdraw(money);
         }
     }
 }
