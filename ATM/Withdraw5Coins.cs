@@ -4,25 +4,25 @@ using System.Text;
 
 namespace ATM
 {
-    public class Withdraw20Coins : IWithdraw
+    public class Withdraw5Coins : IWithdraw
     {
         private IWithdraw nexInChain;
-        private int _20CoinCount = 0;
+        private int _5CoinCount = 0;
         public void SetNextWithdrawChain(IWithdraw c)
         {
             nexInChain = c;
         }
         public void Withdraw(Amount request)
         {
-            if (request.amountLeft_ >= 20)
+            if (request.amountLeft_ >= 5)
             {
-                while (request.amountLeft_ >= 20)
+                while (request.amountLeft_ >= 5)
                 {
-                    _20CoinCount++;
-                    request.amountLeft_ -= 20;
+                    _5CoinCount++;
+                    request.amountLeft_ -= 5;
                 }
 
-                Console.WriteLine("You have withdrawn " + _20CoinCount + " x 20 coins.");
+                Console.WriteLine("You have withdrawn " + _5CoinCount + " x 5 coins.");
                 Console.WriteLine("Remaining amount: " + request.amountLeft_);
 
                 nexInChain.Withdraw(request);
