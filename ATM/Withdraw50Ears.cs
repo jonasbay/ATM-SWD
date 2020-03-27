@@ -24,7 +24,7 @@ namespace ATM
                     request.amountLeft_ -= 0.5;
                 }
 
-                Console.WriteLine("You have withdrawed " + _50earsCount + " x 50 ear(s).");
+                Console.WriteLine("You have withdrawed " + _50earsCount + "x 50 ear(s).");
 
                 nexInChain.Withdraw(request);
             }

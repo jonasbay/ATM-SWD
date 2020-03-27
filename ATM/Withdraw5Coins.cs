@@ -22,7 +22,7 @@ namespace ATM
                     request.amountLeft_ -= 5;
                 }
 
-                Console.WriteLine("You have withdrawn " + _5CoinCount + " x 5 coin(s).");
+                Console.WriteLine("You have withdrawn " + _5CoinCount + "x 5 coin(s).");
 
                 nexInChain.Withdraw(request);
             }

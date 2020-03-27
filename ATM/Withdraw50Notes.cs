@@ -25,7 +25,7 @@ namespace ATM
                     request.amountLeft_ -= 50;
                 }
 
-                Console.WriteLine("You have withdrawn " + _50NoteCount + " x 50 note(s).");
+                Console.WriteLine("You have withdrawn " + _50NoteCount + "x 50 note(s).");
 
                 nexInChain.Withdraw(request);
             }
