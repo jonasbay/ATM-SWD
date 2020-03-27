@@ -7,7 +7,7 @@ namespace ATM
    public class Amount
     {
         double amount_;
-        double amountLeft_;
+
 
         public Amount(double amount)
         {
@@ -17,6 +17,6 @@ namespace ATM
 
         public double GetAmount() { return amount_; }
 
-        public double AmountLeft {  get; set; }
+        public double amountLeft_ {  get; set; }
     }
 }
