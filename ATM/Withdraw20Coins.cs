@@ -14,15 +14,15 @@ namespace ATM
         }
         public void Withdraw(Amount request)
         {
-            if (request.amountLeft_ > 20)
+            if (request.amountLeft_ >= 20)
             {
-                while (request.amountLeft_ > 20)
+                while (request.amountLeft_ >= 20)
                 {
                     _20CoinCount++;
                     request.amountLeft_ -= 20;
                 }
 
-                Console.WriteLine("You have withdrawed " + _20CoinCount + " x 20 coins.");
+                Console.WriteLine("You have withdrawn " + _20CoinCount + " x 20 coins.");
                 Console.WriteLine("Remaining amount: " + request.amountLeft_);
 
                 nexInChain.Withdraw(request);

@@ -17,15 +17,15 @@ namespace ATM
 
         public void Withdraw(Amount request)
         {
-            if (request.amountLeft_ > 50)
+            if (request.amountLeft_ >= 50)
             {
-                while (request.amountLeft_ > 50)
+                while (request.amountLeft_ >= 50)
                 {
                     _50NoteCount++;
                     request.amountLeft_ -= 50;
                 }
 
-                Console.WriteLine("You have withdrawed " + _50NoteCount + " x 100 Notes.");
+                Console.WriteLine("You have withdrawn " + _50NoteCount + " x 100 Notes.");
                 Console.WriteLine("Remaining amount: " + request.amountLeft_);
 
                 nexInChain.Withdraw(request);

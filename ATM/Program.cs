@@ -6,7 +6,7 @@ namespace ATM
     {
         static void Main(string[] args)
         {
-            var hundreddollarbills = new Amount(570);
+            var money = new Amount(570);
 
             IWithdraw chainlinkHead = new Withdraw500Notes();
             IWithdraw chainlink1 = new Withdraw100Notes();
@@ -15,8 +15,9 @@ namespace ATM
 
             chainlinkHead.SetNextWithdrawChain(chainlink1);
             chainlink1.SetNextWithdrawChain(chainlink2);
+            chainlink2.SetNextWithdrawChain(chainlink3);
 
-            chainlinkHead.Withdraw(hundreddollarbills);
+            chainlinkHead.Withdraw(money);
         }
     }
 }
