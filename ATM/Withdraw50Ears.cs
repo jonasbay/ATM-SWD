@@ -18,7 +18,7 @@ namespace ATM
         {
             if (request.amountLeft_ >= 0.5)
             {
-                while (request.amountLeft_ > 0.5)
+                while (request.amountLeft_ >= 0.5)
                 {
                     _50earsCount++;
                     request.amountLeft_ -= 2;
