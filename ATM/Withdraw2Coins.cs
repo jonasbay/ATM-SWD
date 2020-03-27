@@ -24,8 +24,7 @@ namespace ATM
                     request.amountLeft_ -= 2;
                 }
 
-                Console.WriteLine("You have withdrawed " + _2coinsCount + " x 2 coins.");
-                Console.WriteLine("Remaining amount: " + request.amountLeft_);
+                Console.WriteLine("You have withdrawed " + _2coinsCount + "x 2 coin(s).");
 
                 nexInChain.Withdraw(request);
             }

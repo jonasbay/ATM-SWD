@@ -24,8 +24,7 @@ namespace ATM
                     request.amountLeft_ -= 500;
                 }
 
-                Console.WriteLine("You have withdrawn " + _500noteCount + "x 500 dollar bills.");
-                Console.WriteLine("Remaining amount: " + request.amountLeft_);
+                Console.WriteLine("You have withdrawn " + _500noteCount + "x 500 note(s).");
 
                 _nextInChain.Withdraw(request);
             }

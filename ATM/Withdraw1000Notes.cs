@@ -4,10 +4,10 @@ using System.Text;
 
 namespace ATM
 {
-    public class Withdraw100Notes : IWithdraw
+    public class Withdraw1000Notes : IWithdraw
     {
         private IWithdraw _nextInChain;
-        private int _100noteCount = 0;
+        private int _1000noteCount = 0;
 
         public void SetNextWithdrawChain(IWithdraw c)
         {
@@ -16,15 +16,15 @@ namespace ATM
 
         public void Withdraw(Amount request)
         {
-            if (request.amountLeft_ >= 100)
+            if (request.amountLeft_ >= 1000)
             {
-                while (request.amountLeft_ >= 100)
+                while (request.amountLeft_ >= 1000)
                 {
-                    _100noteCount++;
-                    request.amountLeft_ -= 100;
+                    _1000noteCount++;
+                    request.amountLeft_ -= 1000;
                 }
 
-                Console.WriteLine("You have withdrawn " + _100noteCount + "x 100 note(s).");
+                Console.WriteLine("You have withdrawn " + _1000noteCount + "x 1000 note(s).");
 
                 _nextInChain.Withdraw(request);
             }

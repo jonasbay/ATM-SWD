@@ -21,11 +21,10 @@ namespace ATM
                 while (request.amountLeft_ >= 0.5)
                 {
                     _50earsCount++;
-                    request.amountLeft_ -= 2;
+                    request.amountLeft_ -= 0.5;
                 }
 
-                Console.WriteLine("You have withdrawed " + _50earsCount + " x 50 ears.");
-                Console.WriteLine("Remaining amount: " + request.amountLeft_);
+                Console.WriteLine("You have withdrawed " + _50earsCount + "x 50 ear(s).");
 
                 nexInChain.Withdraw(request);
             }
