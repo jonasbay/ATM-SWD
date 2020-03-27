@@ -16,16 +16,16 @@ namespace ATM
 
         public void Withdraw(Amount request)
         {
-            if (request.AmountLeft > 100)
+            if (request.amountLeft_ > 100)
             {
-                while (request.AmountLeft > 100)
+                while (request.amountLeft_ > 100)
                 {
                     _100billsCount++;
-                    request.AmountLeft -= 100;
+                    request.amountLeft_ -= 100;
                 }
 
                 Console.WriteLine("You have withdrawed " + _100billsCount + "100 dollar bills.");
-                Console.WriteLine("Remaining amount: " + request.AmountLeft);
+                Console.WriteLine("Remaining amount: " + request.amountLeft_);
 
                 nexInChain.Withdraw(request);
             }
