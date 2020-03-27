@@ -9,6 +9,7 @@ namespace ATM
         double amount_;
         public double amountLeft_ { get; set; }
 
+
         public Amount(double amount)
         {
             amount_ = amount;
