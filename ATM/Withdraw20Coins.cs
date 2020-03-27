@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ATM
 {
-    class Withdraw20Coins
+    public class Withdraw20Coins : IWithdraw
     {
         private IWithdraw nexInChain;
         private int _20CoinCount = 0;
