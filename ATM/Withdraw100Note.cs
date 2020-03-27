@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ATM
 {
-    public class Withdraw100Bills : IWithdraw
+    public class Withdraw100Note : IWithdraw
     {
         private IWithdraw nexInChain;
         private int _100billsCount = 0;
@@ -24,7 +24,7 @@ namespace ATM
                     request.amountLeft_ -= 100;
                 }
 
-                Console.WriteLine("You have withdrawed " + _100billsCount + "100 bills.");
+                Console.WriteLine("You have withdrawed " + _100billsCount + "x 100 dollar bills.");
                 Console.WriteLine("Remaining amount: " + request.amountLeft_);
 
                 nexInChain.Withdraw(request);
