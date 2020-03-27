@@ -17,6 +17,6 @@ namespace ATM
 
         public double GetAmount() { return amount_; }
 
-        public double AmountLeft {  get; set; }
+        public double AmountLeft {  get ; set; }
     }
 }
