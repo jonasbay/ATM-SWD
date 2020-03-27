@@ -7,7 +7,6 @@ namespace ATM
    public class Amount
     {
         double amount_;
-        double amountLeft_;
 
 
         public Amount(double amount)
