@@ -10,12 +10,12 @@ namespace ATM
 
             IWithdraw chainlinkHead = new Withdraw500Notes();
             IWithdraw chainlink1 = new Withdraw100Notes();
-            IWithdraw chainlink2 = new Withdraw50Notes();
-            IWithdraw chainlink3 = new Withdraw20Coins();
+            //IWithdraw chainlink2 = new Withdraw50Notes();
+            IWithdraw chainlink2 = new Withdraw20Coins();
 
             chainlinkHead.SetNextWithdrawChain(chainlink1);
             chainlink1.SetNextWithdrawChain(chainlink2);
-            chainlink2.SetNextWithdrawChain(chainlink3);
+            //chainlink2.SetNextWithdrawChain(chainlink3);
 
             chainlinkHead.Withdraw(money);
         }

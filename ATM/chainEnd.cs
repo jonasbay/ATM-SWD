@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ATM
+﻿namespace ATM
 {
-    public class Withdraw50Notes : IWithdraw
+    public class chainEnd : IWithdraw
     {
 
         private IWithdraw nexInChain;
