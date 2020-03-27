@@ -7,6 +7,7 @@ namespace ATM
         static void Main(string[] args)
         {
             double amountToWithdraw;
+            var money = new Amount(570);
 
             Console.WriteLine("Enter an amount to withdraw: ");
             amountToWithdraw = Convert.ToDouble(Console.ReadLine());
@@ -32,6 +33,7 @@ namespace ATM
             chainlink6.SetNextWithdrawChain(chainlink7);
             chainlink7.SetNextWithdrawChain(chainlink8);
 
+            chainlinkHead.Withdraw(money);
             chainlinkHead.Withdraw(hundreddollarbills);
             Console.WriteLine("Total amount withdrawn: " + amountToWithdraw);
 

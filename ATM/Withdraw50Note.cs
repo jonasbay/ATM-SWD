@@ -17,9 +17,9 @@ namespace ATM
 
         public void Withdraw(Amount request)
         {
-            if (request.amountLeft_ > 50)
+            if (request.amountLeft_ >= 50)
             {
-                while (request.amountLeft_ > 50)
+                while (request.amountLeft_ >= 50)
                 {
                     _50NoteCount++;
                     request.amountLeft_ -= 50;
